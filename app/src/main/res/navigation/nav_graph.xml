@@ -3,26 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/fragment_selection">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/fragment_selection"
         android:name="com.ibancurrency.SelectionFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/selection"
         tools:layout="@layout/fragment_selection">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_SelectionFragment_to_CurrencyConverter"
+            app:destination="@id/fragment_currencyconverter"
+            app:popUpTo="@+id/fragment_selection"
+            />
+        <action
+            android:id="@+id/action_SelectionFragment_to_IbanValidator"
+            app:destination="@id/fragment_ibanvalidator"
+            app:popUpTo="@+id/fragment_selection"
+            />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.ibancurrency.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/fragment_currencyconverter"
+        android:name="com.ibancurrency.currencyconverter.presentation.CurrencyConverterFragment"
+        android:label="@string/currency_converter"
+        tools:layout="@layout/fragment_currency_converter">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_ibanvalidator"
+        android:name="com.ibancurrency.ibavalidater.presentation.IbanValidatorFragment"
+        android:label="@string/iban_validator"
+        tools:layout="@layout/fragment_ibanvalidator">
+
     </fragment>
 </navigation>

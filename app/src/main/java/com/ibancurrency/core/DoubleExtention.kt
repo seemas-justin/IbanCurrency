@@ -1,4 +1,4 @@
-package com.kwdcurrencyconverter.core
+package com.ibancurrency.core
 
 import kotlin.math.roundToInt
 

@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.ibancurrency.databinding.FragmentSelectionBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
+@AndroidEntryPoint
 class SelectionFragment : Fragment() {
 
     private var _binding: FragmentSelectionBinding? = null
@@ -22,7 +24,7 @@ class SelectionFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentSelectionBinding.inflate(inflater, container, false)
         return binding.root
@@ -33,10 +35,10 @@ class SelectionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonIbanvalidator.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_SelectionFragment_to_IbanValidator)
         }
         binding.buttonCurrencyconverter.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            findNavController().navigate(R.id.action_SelectionFragment_to_CurrencyConverter)
         }
     }
 

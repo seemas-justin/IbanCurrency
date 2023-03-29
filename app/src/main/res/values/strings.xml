@@ -1,14 +1,17 @@
 <resources>
     <string name="app_name">IbanCurrency</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="iban_validator">Iban Validator</string>
     <string name="currency_converter">Currency Converter</string>
+
+    <string name="please_the_amount_kd_for_conversion">Please the amount(KD) for conversion</string>
+    <string name="convert">Convert</string>
+    <string name="refresh_rate">Refresh Rate</string>
+    <string name="one_kd_equalent">1 KD #value#</string>
+    <string name="selection">Selection</string>
+
+    <string name="enter_iban_number">Enter Iban number</string>
+    <string name="validate">Validate</string>
+    <string name="iban_validation_success">Validation Success</string>
+    <string name="iban_validtion_failed">Validation Failed</string>
+    <string name="validating">Validating....</string>
 </resources>

@@ -2,8 +2,8 @@ package com.ibancurrency.common.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.kwdcurrencyconverter.BuildConfig
-import com.kwdcurrencyconverter.core.Constants
+import com.ibancurrency.BuildConfig
+import com.ibancurrency.core.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -49,7 +49,7 @@ object RetrofitModule {
             proceed(
                 request()
                     .newBuilder()
-                    .addHeader("apikey", BuildConfig.API_KEY)
+                    .addHeader("apikey", BuildConfig.API_KEY )
                     .build()
             )
 

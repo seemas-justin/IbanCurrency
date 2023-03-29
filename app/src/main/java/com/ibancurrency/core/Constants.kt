@@ -1,5 +1,5 @@
-package com.kwdcurrencyconverter.core
+package com.ibancurrency.core
 
 object Constants {
-    const val BASEURL = "https://api.apilayer.com/fixer/"
+    const val BASEURL = "https://api.apilayer.com/"
 }

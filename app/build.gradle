@@ -40,6 +40,16 @@ android {
     }
 }
 
+def apikeyPropertiesFile = rootProject.file("apikey.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
+android {
+    defaultConfig {
+        buildConfigField("String", "API_KEY", apikeyProperties['API_KEY'])
+    }
+}
+
 dependencies {
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
